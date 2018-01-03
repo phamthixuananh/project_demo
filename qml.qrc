@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>HomeForm.ui.qml</file>
+        <file>Page1Form.Anh.ui.qml</file>
+        <file>Page2Form.Long.ui.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Page3Form.Loc.ui.qml</file>
+        <file>content/images/img_add_new_contact.png</file>
+        <file>content/images/img_group.png</file>
+        <file>content/images/img_quark_group.png</file>
+        <file>main.cpp</file>
+        <file>content/js/management_employee.js</file>
+        <file>MyTabBar.qml</file>
+        <file>SearchDelegate.qml</file>
+        <file>FlipBar.qml</file>
+        <file>LineInput.qml</file>
+        <file>content/images/icon-clear.png</file>
+        <file>content/images/icon-loading.png</file>
+        <file>content/images/icon-refresh.png</file>
+        <file>content/images/icon-search.png</file>
+    </qresource>
+</RCC>
