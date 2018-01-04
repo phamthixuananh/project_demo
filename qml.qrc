@@ -19,5 +19,6 @@
         <file>content/images/icon-loading.png</file>
         <file>content/images/icon-refresh.png</file>
         <file>content/images/icon-search.png</file>
+        <file>EmployeeModel.qml</file>
     </qresource>
 </RCC>

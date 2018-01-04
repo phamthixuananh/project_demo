@@ -23,22 +23,65 @@ Page {
         Page {
             id: managementPage
             background: Rectangle {
-
-                color:"purple"
+                color:"#a9e2f3"
             }
-            Text {
-                id: txtName
-                text: qsTr("text")
+            Component {
+                    id: contactDelegate
+                    Item {
+                        height: 300
+
+                        Image {
+                            id: imgAvatar
+                            width: 100
+                            height: 100
+                            source: "/content/images/img_group.png"
+                        }
+
+                        Text {
+                            id: txtName
+                            anchors.left: imgAvatar.right
+                            anchors.top: imgAvatar.top
+                            text: 'Name: ' + name
+                        }
+                        Text {
+                            id: txtPosition
+                            anchors.left: imgAvatar.right
+                            anchors.top: txtName.bottom
+                            text: 'Position: ' + position
+                        }
+                        Text {
+                            id: txtBirthday
+                            anchors.left: imgAvatar.right
+                            anchors.top: txtPosition.bottom
+                            text: 'Birthday: ' + birthday
+                        }
+
+                    }
+                }
+            ListView {
+                anchors.fill: parent
+                model: EmployeeModel {}
+                delegate: contactDelegate
             }
         }
         Page {
             id: experiodPage
             background: Rectangle {
 
-                color:"yellow"
+                color:"#f7d358"
             }
             Text {
                 id: txtName2
+                text: qsTr("text")
+            }
+        }
+        Page {
+            id: accountPage
+            background: Rectangle {
+
+                color:"#f6cef5"
+            }
+            Text {
                 text: qsTr("text")
             }
         }
@@ -48,12 +91,20 @@ Page {
     footer: TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
+        font.capitalization: Font.AllUppercase
+        anchors.bottom: parent.bottom
 
         TabButton {
-            text: "First"
+            text: "Management"
+            height: 150
         }
         TabButton {
-            text: "Second"
+            text: "Expired"
+            height: 150
+        }
+        TabButton {
+            text: "Account"
+            height: 150
         }
     }
 }

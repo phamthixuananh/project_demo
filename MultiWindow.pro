@@ -37,6 +37,7 @@ DISTFILES += \
     SearchDelegate.qml \
     FlipBar.qml \
     LineInput.qml \
+    EmployeeModel \
     content/js/management_employee.js \
     content/images/img_add_new_contact.png \
     content/images/img_group.png \
