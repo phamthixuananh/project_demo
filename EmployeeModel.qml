@@ -1,6 +1,7 @@
 import QtQuick 2.0
 
 ListModel {
+    id: model
     ListElement {
         name: "John"
         department: "Dev"
