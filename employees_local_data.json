@@ -1,0 +1,34 @@
+{
+  "datas": [
+    {
+      "id": 1,
+      "name": "Nguyễn Dương Thảo Linh",
+      "birthday": "1996-01-12",
+      "position": "BA",
+      "department": "Ikorn",
+      "dateContract": "2018-01-02",
+      "email": "ndtlinh@ikornsolutions.com",
+      "phone": "0966721821"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Thị Tuyết Mai",
+      "birthday": "1995-12-20",
+      "position": "QC",
+      "department": "Ikorn",
+      "dateContract": "2017-07-10",
+      "email": "nttmai@ikornsolutions.com",
+      "phone": "0165432982"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Thị Kiều Diễm",
+      "birthday": "1990-01-02",
+      "position": "PHP",
+      "department": "Ikorn",
+      "dateContract": "2015-04-23",
+      "email": "ntkdiem@ikornsolutions.com",
+      "phone": null
+    }
+  ]
+}

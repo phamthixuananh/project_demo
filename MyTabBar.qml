@@ -1,10 +1,16 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.1
-
+import "ManagementEmployee.js" as ManagementEmp
 Page {
     id: page
     title: qsTr("Page cua Anh")
     property bool showDetail: false
+    property alias msg: pageDetail
+    Connections {
+        target: stackView
+    }
+
+    //ListModel { id: employees }
     SearchDelegate {
         id: searchView
         label: "From user..."
@@ -26,6 +32,7 @@ Page {
                 Item {
                     height: 300
                     width: 500
+
                     Image {
                         id: imgAvatar
                         width: 100
@@ -37,36 +44,38 @@ Page {
                         id: txtName
                         anchors.left: imgAvatar.right
                         anchors.top: imgAvatar.top
-                        text: 'Name: ' + name
+                        text: 'Name: ' + model.name
                     }
                     Text {
                         id: txtPosition
                         anchors.left: imgAvatar.right
                         anchors.top: txtName.bottom
-                        text: 'Position: ' + position
+                        text: 'Position: ' + model.position
                     }
                     Text {
                         id: txtBirthday
                         anchors.left: imgAvatar.right
                         anchors.top: txtPosition.bottom
-                        text: 'Birthday: ' + birthday
+                        text: 'Birthday: ' + model.birthday
 
                     }
                     MouseArea {
                         id: mouse
                         anchors.fill: parent
                         onClicked: {
-                            pageDetail.visible = true
-                            listAll.visible = false
-                            showDetail = true
-                            btnBack.visible = true
-                            pageDetail.children = ""
-                            var component= Qt.createComponent("EmployeeDetailPage.qml")
-                                        var loadwin = component.createObject(pageDetail)
-                                        loadwin.name = name
-                                        loadwin.pos = position
-                                        loadwin.birthday = birthday
-                                        loadwin.dateContract = dateContract
+//                            pageDetail.visible = true
+//                            listAll.visible = false
+//                            showDetail = true
+//                            btnBack.visible = true
+//                            pageDetail.children = ""
+                            stackView.push({item: "Page1Form.Anh.ui.qml", properties: {name: "red"}})
+//                            var component= Qt.createComponent("EmployeeDetailPage.qml")
+//                                        var loadwin = component.createObject(pageDetail)
+//                                        loadwin.name = name
+//                                        loadwin.pos = position
+//                                        loadwin.birthday = birthday
+//                                        loadwin.dateContract = dateContract
+//                                        ManagementEmp.funcLoadDetail(loadwin.msg)
                         }
 
                     }
@@ -98,12 +107,17 @@ Page {
             ListView {
                 id: listAll
                 anchors.fill: parent
-                model: EmployeeModel {}
+                model: ListModel {
+                    id: employees
+                }
+
+                Component.onCompleted: ManagementEmp.getOrUpdateEmployees(employees)
                 delegate: contactDelegate
 
             }
 
             Item {
+                anchors.top: btnBack.bottom
                 id: pageDetail
                 visible: false
             }

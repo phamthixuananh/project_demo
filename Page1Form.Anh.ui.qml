@@ -4,11 +4,10 @@ import QtQuick.Controls 2.2
 Page {
     id: root
     title: qsTr("Page cua Anh")
-    anchors.fill: parent
 
     SwipeView {
-        id: swipeView
-        currentIndex: tabBar.currentIndex
+        id: swipeView3
+        currentIndex: tabBar2.currentIndex
         Page {
             id: managementPage
             Rectangle {
@@ -19,7 +18,7 @@ Page {
                 id: text1
                 x: 21
                 y: 33
-                text: qsTr("I am the very model of a modern major general!")
+                text: name
                 color: "red"
                 horizontalAlignment: Image.AlignHCenter
                 verticalAlignment: Image.AlignVCenter
@@ -44,8 +43,8 @@ Page {
 
     }
     footer: TabBar {
-            id: tabBar
-            currentIndex: swipeView.currentIndex
+            id: tabBar2
+            currentIndex: swipeView3.currentIndex
             TabButton {
                 text: "Management"
             }

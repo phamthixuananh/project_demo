@@ -5,6 +5,7 @@ Item {
     property string pos: ""
     property string dateContract: ""
     property string birthday: ""
+    property alias msg: txtTest
     anchors.fill: parent
 
     Image {
@@ -37,7 +38,14 @@ Item {
         id: txtDateContract
         anchors.left: imgAvatar.right
         anchors.top: txtBirthday.bottom
-        text: 'Birthday: ' + dateContract
+        text: 'Date Contract: ' + dateContract
+
+    }
+    Text {
+        id: txtTest
+        anchors.left: imgAvatar.right
+        anchors.top: txtDateContract.bottom
+        text: 'Test api: '
 
     }
 }

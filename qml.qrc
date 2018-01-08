@@ -22,5 +22,7 @@
         <file>EmployeeModel.qml</file>
         <file>TestQml.qml</file>
         <file>EmployeeDetailPage.qml</file>
+        <file>ManagementEmployee.js</file>
+        <file>employees_local_data.json</file>
     </qresource>
 </RCC>

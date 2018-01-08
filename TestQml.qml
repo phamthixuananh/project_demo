@@ -98,10 +98,7 @@ ApplicationWindow {
             ListView {
                 model: pageModel
                 anchors.fill: parent
-                delegate: AndroidDelegate {
-                    text: title
-                    onClicked: stackView.push(Qt.resolvedUrl(page))
-                }
+
             }
         }
     }

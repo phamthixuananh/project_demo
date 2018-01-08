@@ -38,7 +38,9 @@ DISTFILES += \
     FlipBar.qml \
     LineInput.qml \
     EmployeeModel \
+    ManagementEmployee \
     content/js/management_employee.js \
     content/images/img_add_new_contact.png \
     content/images/img_group.png \
-    content/images/img_quark_group.png
+    content/images/img_quark_group.png \
+    employees_local_data.json
